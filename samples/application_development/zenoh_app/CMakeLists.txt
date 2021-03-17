@@ -45,15 +45,50 @@ set(zenoh_pico_INCLUDE_DIR ${zenoh_pico_src_dir}/include)
 
 ExternalProject_Add(
   zenoh_pico_project
-  GIT_REPOSITORY https://github.com/esteve/zenoh-pico.git
-  GIT_TAG 34942db3646b6d98f3617823dfbe4685ef724c3d
-  GIT_SHALLOW ON
-  TIMEOUT 60
+  SOURCE_DIR "/home/esteve/Projects/adlink/zenoh-pico"
+  # GIT_REPOSITORY https://github.com/esteve/zenoh-pico.git
+  # GIT_TAG 9015569675a3f9fb872d7f40d5116e2d40508b9b
+  # GIT_SHALLOW ON
+  # TIMEOUT 60
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX=${zenoh_pico_build_dir}
     -DUNIX_TARGET=OFF
     -DZEPHYR_TARGET=ON
-  BUILD_BYPRODUCTS ${zenoh_pico_LIB_DIR}/libzenoh_pico.a
+    -DEXAMPLES=OFF
+    -DTESTS=OFF
+    -DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}
+    -DCMAKE_AR=${CMAKE_AR}
+    -DCMAKE_C_COMPILER_WORKS=1
+    -DZENOH_ZEPHYR=1
+    # -DCONFIG_PTHREAD_IPC=y
+    # -DCONFIG_POSIX_API=y
+    # -DCONFIG_NET_NATIVE_IPV4=y
+    # -DCONFIG_NET_IPV4=y
+    # -DCONFIG_NET_IF_UNICAST_IPV4_ADDR_COUNT=1
+    # -DCONFIG_NET_IF_MCAST_IPV4_ADDR_COUNT=1
+    # # -DCONFIG_ARM=1
+    # -DCONFIG_SOC_SERIES_STM32F4X=y
+    # -DCONFIG_SOC_STM32F407XG=y
+    # -DCONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=168000000
+    # -DCONFIG_ARM_MPU=y
+    # -DCONFIG_HW_STACK_PROTECTION=y
+    # -DCONFIG_SERIAL=y
+    # -DCONFIG_CONSOLE=y
+    # -DCONFIG_UART_CONSOLE=y
+    # -DCONFIG_PINMUX=y
+    # -DCONFIG_GPIO=y
+    # -DCONFIG_CLOCK_CONTROL=y
+    # -DCONFIG_CLOCK_STM32_HSE_CLOCK=12000000
+    # -DCONFIG_CLOCK_STM32_SYSCLK_SRC_PLL=y
+    # -DCONFIG_CLOCK_STM32_PLL_SRC_HSE=y
+    # -DCONFIG_CLOCK_STM32_PLL_M_DIVISOR=6
+    # -DCONFIG_CLOCK_STM32_PLL_N_MULTIPLIER=168
+    # -DCONFIG_CLOCK_STM32_PLL_P_DIVISOR=2
+    # -DCONFIG_CLOCK_STM32_PLL_Q_DIVISOR=7
+    # -DCONFIG_CLOCK_STM32_AHB_PRESCALER=1
+    # -DCONFIG_CLOCK_STM32_APB1_PRESCALER=4
+    # -DCONFIG_CLOCK_STM32_APB2_PRESCALER=2
+    # BUILD_BYPRODUCTS ${zenoh_pico_LIB_DIR}/libzenoh_pico.a
 )
 
 # zenoh_pico_project                 # Name for custom target
@@ -72,12 +107,18 @@ ExternalProject_Add(
 #   )
 
 # Create a wrapper CMake library that our app can link with
-add_library(zenoh_pico_lib STATIC IMPORTED GLOBAL)
-add_dependencies(
-  zenoh_pico_lib
-  zenoh_pico_project
-  )
+# add_library(zenoh_pico_lib STATIC IMPORTED GLOBAL)
+# add_dependencies(
+#   zenoh_pico_lib
+#   zenoh_pico_project
+#   )
 # set_target_properties(zenoh_pico_lib PROPERTIES IMPORTED_LOCATION             ${zenoh_pico_LIB_DIR}/libzenoh_pico.a)
 # set_target_properties(zenoh_pico_lib PROPERTIES INTERFACE_INCLUDE_DIRECTORIES ${zenoh_pico_INCLUDE_DIR})
 
-target_link_libraries(app PUBLIC zenoh_pico_lib)
+# target_link_libraries(app PUBLIC zenoh_pico_lib)
+
+# add_library(zenoh_pico_lib STATIC IMPORTED GLOBAL)
+add_dependencies(
+  app
+  zenoh_pico_project
+  )

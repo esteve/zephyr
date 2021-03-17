@@ -16,6 +16,13 @@ LOG_MODULE_REGISTER(net_telnet_sample, LOG_LEVEL_DBG);
 #include <net/net_if.h>
 #include <net/net_mgmt.h>
 
+#include <zephyr.h>
+#include <sys/printk.h>
+#include <sys/util.h>
+#include <string.h>
+#include <usb/usb_device.h>
+#include <drivers/uart.h>
+
 #if defined(CONFIG_NET_DHCPV4)
 static struct net_mgmt_event_callback mgmt_cb;
 
@@ -137,13 +144,40 @@ static void setup_ipv6(struct net_if *iface)
 
 void main(void)
 {
-	struct net_if *iface = net_if_get_default();
+	const struct device *dev = device_get_binding(
+			CONFIG_UART_CONSOLE_ON_DEV_NAME);
+	uint32_t dtr = 0;
 
-	LOG_INF("Starting Telnet sample");
+	if (usb_enable(NULL)) {
+		return;
+	}
 
-	setup_ipv4(iface);
+	/* Poll if the DTR flag was set, optional */
+	while (!dtr) {
+		uart_line_ctrl_get(dev, UART_LINE_CTRL_DTR, &dtr);
+	}
 
-	setup_dhcpv4(iface);
+	if (strlen(CONFIG_UART_CONSOLE_ON_DEV_NAME) !=
+	    strlen("CDC_ACM_0") ||
+	    strncmp(CONFIG_UART_CONSOLE_ON_DEV_NAME, "CDC_ACM_0",
+		    strlen(CONFIG_UART_CONSOLE_ON_DEV_NAME))) {
+		LOG_INF("Error: Console device name is not USB ACM\n");
 
-	setup_ipv6(iface);
+		return;
+	}
+
+	for (int i = 0; i < 10; ++i) {
+		printk("Configuration: %d\n", i);
+		k_sleep(K_SECONDS(1));
+	}
+
+	// struct net_if *iface = net_if_get_default();
+
+	printk("Starting Telnet sample");
+
+	// setup_ipv4(iface);
+
+	// setup_dhcpv4(iface);
+
+	// setup_ipv6(iface);
 }

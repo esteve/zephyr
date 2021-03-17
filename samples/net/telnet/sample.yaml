@@ -2,6 +2,9 @@ sample:
   name: Telnet Server
 tests:
   sample.net.telnet:
-    harness: net
-    depends_on: netif
-    tags: net telnet
+    harness: console net
+    depends_on: netif usb_device usb_cdc
+    tags: net telnet usb
+    platform_exclude: native_posix native_posix_64
+    harness_config:
+      fixture: fixture_usb_cdc
