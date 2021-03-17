@@ -145,8 +145,8 @@ link_directories(${LIBRARY_OUTPUT_PATH})
 
 add_library(${Libname} STATIC ${Sources})
 include_directories(
-  /home/esteve/Projects/adlink/zephyrproject/zephyr/include
-  /home/esteve/Projects/adlink/zephyrproject/zephyr/build/zephyr/include/generated)
+  $ENV{ZEPHYR_BASE}/include
+  $ENV{ZEPHYR_BASE}/build/zephyr/include/generated)
 
 if (UNIX_TARGET)
   if (CMAKE_HOST_SYSTEM_NAME MATCHES "Darwin")
