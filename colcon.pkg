@@ -1,0 +1,11 @@
+{
+    "name": "zenoh_pico",
+    "type": "cmake",
+    "cmake-args":[
+        "-DTESTS=OFF",
+        "-DEXAMPLES=OFF",
+        "-DCONTIKI=OFF",
+        "-DUNIX_TARGET=OFF",
+        "-DZEPHYR_TARGET=ON",
+    ],
+}
