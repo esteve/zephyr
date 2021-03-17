@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.13.1)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(external_lib)
 
-target_sources(app PRIVATE src/main.c)
+target_sources(app PRIVATE ${CMAKE_SOURCE_DIR}/src/main.c)
 
 # The external static library that we are linking with does not know
 # how to build for this platform so we export all the flags used in
