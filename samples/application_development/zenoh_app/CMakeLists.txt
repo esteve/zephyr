@@ -45,7 +45,7 @@ set(zenoh_pico_INCLUDE_DIR ${zenoh_pico_src_dir}/include)
 
 ExternalProject_Add(
   zenoh_pico_project
-  SOURCE_DIR "/home/esteve/Projects/adlink/zenoh-pico"
+  SOURCE_DIR "${CMAKE_SOURCE_DIR}/external/zenoh-pico"
   # GIT_REPOSITORY https://github.com/esteve/zenoh-pico.git
   # GIT_TAG 9015569675a3f9fb872d7f40d5116e2d40508b9b
   # GIT_SHALLOW ON
