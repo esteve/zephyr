@@ -16,7 +16,7 @@ target_sources(app PRIVATE
   external/zenoh-pico/src/net/lease_task.c
   external/zenoh-pico/src/net/msgcodec.c
   external/zenoh-pico/src/net/property.c
-  # external/zenoh-pico/src/net/read_task.c
+  external/zenoh-pico/src/net/read_task.c
   external/zenoh-pico/src/net/rname.c
   # external/zenoh-pico/src/net/session.c
   # external/zenoh-pico/src/net/zephyr/network.c
