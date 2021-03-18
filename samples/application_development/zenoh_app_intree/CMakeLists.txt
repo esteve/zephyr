@@ -20,7 +20,7 @@ target_sources(app PRIVATE
   external/zenoh-pico/src/net/rname.c
   # external/zenoh-pico/src/net/session.c
   # external/zenoh-pico/src/net/zephyr/network.c
-  # external/zenoh-pico/src/net/zephyr/system.c
+  external/zenoh-pico/src/net/zephyr/system.c
   src/rand.c
   src/strdup.c
   src/strtof.c
