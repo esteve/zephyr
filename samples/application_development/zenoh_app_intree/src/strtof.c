@@ -1,3 +1,5 @@
+#include <stdbool.h>
+
 /**
  * Parse the first float found in a char array
  * @param str char array to parse
