@@ -24,7 +24,7 @@ target_sources(app PRIVATE
   src/rand.c
   src/strdup.c
   src/strtof.c
-  # src/strtok.c
+  src/strtok.c
   src/main.c)
 target_include_directories(app PRIVATE external/zenoh-pico/include/)
 target_compile_definitions(app PRIVATE -DZENOH_ZEPHYR=1)
