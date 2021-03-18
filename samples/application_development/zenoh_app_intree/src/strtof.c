@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdbool.h>
 
 /**
@@ -12,7 +13,7 @@ float strtof(const char* str) {
     float div = 1; // Divider to place digits after the deciaml point
 
     while (*ptr != '\0') {
-        if (isDigit(*ptr)) {
+        if (isdigit((int)*ptr)) {
             // Integer part
             if (!after_decimal_point) {
                 res *= 10; // Shift the previous digits to the left
