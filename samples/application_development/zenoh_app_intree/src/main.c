@@ -10,7 +10,7 @@
 #include <zephyr.h>
 #include <stdio.h>
 
-#include <zenoh_pico.h>
+#include <zenoh-pico.h>
 
 void main(void)
 {
