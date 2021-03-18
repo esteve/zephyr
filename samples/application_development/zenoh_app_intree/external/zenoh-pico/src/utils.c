@@ -15,6 +15,8 @@
 #include <string.h>
 #include "zenoh-pico/utils.h"
 
+char *strdup(const char *s);
+
 z_string_t z_string_make(const char *value)
 {
     z_string_t s;
