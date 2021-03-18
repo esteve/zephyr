@@ -17,7 +17,7 @@
 #define _ZENOH_PICO_TYPES_H
 
 #include <stdint.h>
-#include "zenoh-pico/private/system.h"
+#include "zenoh-pico/private/system/zephyr.h"
 
 /*------------------ Collection ------------------*/
 typedef struct

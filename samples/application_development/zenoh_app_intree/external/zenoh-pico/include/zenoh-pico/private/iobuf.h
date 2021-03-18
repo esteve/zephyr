@@ -18,6 +18,7 @@
 #include <stdint.h>
 #include "zenoh-pico/private/collection.h"
 #include "zenoh-pico/private/types.h"
+#include "zenoh-pico/types.h"
 
 /*------------------ IOSli ------------------*/
 _z_iosli_t _z_iosli_wrap(uint8_t *buf, size_t capacity, size_t r_pos, size_t w_pos);

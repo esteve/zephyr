@@ -12,21 +12,21 @@
  *   ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
-#include <posix/sys/time.h>
-#include <posix/arpa/inet.h>
+#include <sys/time.h>
+#include <arpa/inet.h>
 #include <errno.h>
 #include <net/net_if.h>
 
 #include <sys/types.h>
-#include <posix/sys/socket.h>
+#include <sys/socket.h>
 
-#include <posix/netdb.h>
-#include <posix/net/if.h>
+#include <netdb.h>
+#include <net/if.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <posix/unistd.h>
+#include <unistd.h>
 #include "zenoh-pico/net/private/system.h"
 #include "zenoh-pico/private/logging.h"
 

@@ -12,6 +12,7 @@
  *   ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
+#include <pthread.h>
 #include "zenoh-pico/net/private/internal.h"
 #include "zenoh-pico/net/session.h"
 #include "zenoh-pico/private/logging.h"

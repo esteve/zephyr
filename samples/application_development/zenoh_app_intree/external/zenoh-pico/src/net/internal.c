@@ -12,6 +12,8 @@
  *   ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
+#include <pthread.h>
+
 #include "zenoh-pico/net/private/internal.h"
 #include "zenoh-pico/net/private/msg.h"
 #include "zenoh-pico/net/private/msgcodec.h"

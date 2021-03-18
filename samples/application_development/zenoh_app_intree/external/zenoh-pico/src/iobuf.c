@@ -15,6 +15,7 @@
 #include <assert.h>
 #include <stdint.h>
 #include <string.h>
+#include <stdlib.h>
 #include "zenoh-pico/private/iobuf.h"
 
 /*------------------ IOSli ------------------*/

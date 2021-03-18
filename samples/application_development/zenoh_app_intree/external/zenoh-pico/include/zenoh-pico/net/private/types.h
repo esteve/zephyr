@@ -16,6 +16,7 @@
 
 #include "zenoh-pico/types.h"
 #include "zenoh-pico/net/types.h"
+#include "zenoh-pico/private/system/zephyr.h"
 
 #define _ZN_IS_REMOTE 0
 #define _ZN_IS_LOCAL 1

@@ -22,9 +22,9 @@
 #elif (ZENOH_CONTIKI == 1)
 #include "zenoh-pico/private/contiki/types.h"
 #elif (ZENOH_ZEPHYR == 1)
-#include <posix/netinet/in.h>
+#include <netinet/in.h>
+#include <pthread.h>
 #include "zenoh-pico/private/system/zephyr.h"
-#include <posix/pthread.h>
 #endif
 
 /*------------------ Thread ------------------*/

@@ -12,6 +12,7 @@
  *     ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
+#include <pthread.h>
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>

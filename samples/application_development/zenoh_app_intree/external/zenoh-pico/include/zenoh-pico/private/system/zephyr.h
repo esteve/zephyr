@@ -15,7 +15,7 @@
 #ifndef _ZENOH_PICO_UNIX_ZEPHYR_H
 #define _ZENOH_PICO_UNIX_ZEPHYR_H
 
-#include <zephyr.h>
+#include <pthread.h>
 
 typedef pthread_t _z_task_t;
 typedef pthread_attr_t _z_task_attr_t;
