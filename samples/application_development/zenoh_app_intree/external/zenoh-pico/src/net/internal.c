@@ -12,8 +12,6 @@
  *   ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
-char *strdup(const char *s);
-
 #include <pthread.h>
 
 #include "zenoh-pico/net/config.h"

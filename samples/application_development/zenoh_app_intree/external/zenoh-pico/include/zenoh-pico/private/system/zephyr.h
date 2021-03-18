@@ -27,4 +27,6 @@ typedef struct timeval _z_time_t;
 
 typedef clockid_t clock_t;
 
+char *strdup(const char *s);
+
 #endif /* _ZENOH_PICO_UNIX_ZEPHYR_H_ */

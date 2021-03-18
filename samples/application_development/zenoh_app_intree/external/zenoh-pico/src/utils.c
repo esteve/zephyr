@@ -14,8 +14,7 @@
 
 #include <string.h>
 #include "zenoh-pico/utils.h"
-
-char *strdup(const char *s);
+#include "zenoh-pico/private/system/zephyr.h"
 
 z_string_t z_string_make(const char *value)
 {

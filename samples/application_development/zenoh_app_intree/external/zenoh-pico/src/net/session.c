@@ -14,12 +14,15 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include "zenoh-pico/net/config.h"
 #include "zenoh-pico/net.h"
 #include "zenoh-pico/net/private/internal.h"
 #include "zenoh-pico/net/private/msgcodec.h"
 #include "zenoh-pico/net/private/system.h"
 #include "zenoh-pico/private/collection.h"
 #include "zenoh-pico/private/logging.h"
+#include "zenoh-pico/private/system.h"
+#include "zenoh-pico/private/system/zephyr.h"
 
 /*=============================*/
 /*          Private            */

@@ -12,8 +12,6 @@
  *     ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
-char *strdup(const char *s);
-
 #include <pthread.h>
 #include <assert.h>
 #include <stdlib.h>

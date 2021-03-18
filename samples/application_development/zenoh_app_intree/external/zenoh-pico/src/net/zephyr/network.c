@@ -29,6 +29,7 @@
 #include <unistd.h>
 #include "zenoh-pico/net/private/system.h"
 #include "zenoh-pico/private/logging.h"
+#include "zenoh-pico/private/iobuf.h"
 
 typedef struct {
     struct net_if * iface;
