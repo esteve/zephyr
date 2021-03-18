@@ -17,6 +17,8 @@
 
 #include <stdint.h>
 #include <string.h>
+#include "zenoh-pico/net/private/system/zephyr.h"
+
 // #include "zenoh-pico/net/config.h"
 // #include "zenoh-pico/private/collection.h"
 // #include "zenoh-pico/private/iobuf.h"

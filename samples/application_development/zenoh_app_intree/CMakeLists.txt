@@ -11,7 +11,7 @@ target_sources(app PRIVATE
   external/zenoh-pico/src/collection.c
   external/zenoh-pico/src/iobuf.c
   external/zenoh-pico/src/utils.c
-  # external/zenoh-pico/src/net/codec.c
+  external/zenoh-pico/src/net/codec.c
   # external/zenoh-pico/src/net/internal.c
   # external/zenoh-pico/src/net/lease_task.c
   # external/zenoh-pico/src/net/msgcodec.c
