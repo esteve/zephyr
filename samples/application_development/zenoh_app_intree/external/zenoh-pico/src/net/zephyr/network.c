@@ -12,19 +12,21 @@
  *   ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
-#include <arpa/inet.h>
+#include <posix/sys/time.h>
+#include <posix/arpa/inet.h>
 #include <errno.h>
 #include <net/net_if.h>
 
 #include <sys/types.h>
-#include <sys/socket.h>
+#include <posix/sys/socket.h>
 
-#include <netdb.h>
-#include <net/if.h>
+#include <posix/netdb.h>
+#include <posix/net/if.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
+#include <string.h>
+#include <posix/unistd.h>
 #include "zenoh-pico/net/private/system.h"
 #include "zenoh-pico/private/logging.h"
 
@@ -68,7 +70,7 @@ char *_zn_select_scout_iface()
         struct net_addr addr = iface_info.iface->config.ip.ipv4->unicast->address;
         struct sockaddr_in sa = { .sin_family = addr.family, .sin_addr = addr.in_addr };
 
-        getnameinfo(&sa,
+        getnameinfo((const struct sockaddr*)&sa,
             sizeof(struct sockaddr_in),
             host, NI_MAXHOST,
             NULL, 0, NI_NUMERICHOST);

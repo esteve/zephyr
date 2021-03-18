@@ -19,17 +19,13 @@
 
 #if (ZENOH_LINUX == 1) || (ZENOH_MACOS == 1)
 #include "zenoh-pico/private/system/unix.h"
-#include <posix/pthreada.h>
 #elif (ZENOH_CONTIKI == 1)
 #include "zenoh-pico/private/contiki/types.h"
-#include <posix/pthreadb.h>
 #elif (ZENOH_ZEPHYR == 1)
+#include <posix/netinet/in.h>
 #include "zenoh-pico/private/system/zephyr.h"
-#include <posix/pthreadc.h>
+#include <posix/pthread.h>
 #endif
-
-#include "zenoh-pico/private/system/zephyr.h"
-// #include <posix/pthread.h>
 
 /*------------------ Thread ------------------*/
 int _z_task_init(_z_task_t *task, _z_task_attr_t *attr, void *(*fun)(void *), void *arg);

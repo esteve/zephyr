@@ -25,4 +25,6 @@ typedef pthread_cond_t _z_condvar_t;
 typedef struct timespec _z_clock_t;
 typedef struct timeval _z_time_t;
 
+typedef clockid_t clock_t;
+
 #endif /* _ZENOH_PICO_UNIX_ZEPHYR_H_ */
