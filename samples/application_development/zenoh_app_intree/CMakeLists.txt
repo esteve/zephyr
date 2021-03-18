@@ -21,6 +21,7 @@ target_sources(app PRIVATE
   external/zenoh-pico/src/net/zephyr/network.c
   external/zenoh-pico/src/net/zephyr/system.c
   external/zenoh-pico/src/utils.c
+  src/strdup.c
   src/main.c)
 target_include_directories(app PRIVATE external/zenoh-pico/include/)
 target_compile_definitions(app PRIVATE -DZENOH_ZEPHYR=1)
