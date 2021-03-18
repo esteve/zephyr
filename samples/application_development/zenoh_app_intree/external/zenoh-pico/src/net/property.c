@@ -13,8 +13,10 @@
  */
 
 #include <string.h>
-#include "zenoh-pico/net/property.h"
+#include "zenoh-pico/types.h"
 #include "zenoh-pico/private/collection.h"
+#include "zenoh-pico/private/types.h"
+#include "zenoh-pico/net/property.h"
 
 zn_properties_t *zn_properties_make()
 {

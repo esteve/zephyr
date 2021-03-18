@@ -16,6 +16,7 @@
 #define _ZENOH_NET_PICO_MSG_H
 
 #include <stdint.h>
+#include "zenoh-pico/private/codec.h"
 #include "zenoh-pico/net/private/types.h"
 
 // NOTE: 16 bits (2 bytes) may be prepended to the serialized message indicating the total length

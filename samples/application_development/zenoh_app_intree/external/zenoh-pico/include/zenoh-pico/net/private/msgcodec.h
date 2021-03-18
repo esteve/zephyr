@@ -18,6 +18,7 @@
 #define _ZENOH_PICO_FRAME_MESSAGES_VEC_SIZE 32
 
 #include <stdint.h>
+#include "zenoh-pico/private/codec.h"
 #include "zenoh-pico/net/private/codec.h"
 #include "zenoh-pico/net/private/result.h"
 #include "zenoh-pico/net/types.h"

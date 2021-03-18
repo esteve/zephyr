@@ -14,11 +14,11 @@
 
 #include <stdint.h>
 #include <stdio.h>
-#include "zenoh-pico/private/codec.h"
-#include "zenoh-pico/private/collection.h"
+#include "zenoh-pico/private/types.h"
 #include "zenoh-pico/private/logging.h"
-#include "zenoh-pico/net/private/codec.h"
+#include "zenoh-pico/private/codec.h"
 #include "zenoh-pico/net/private/msgcodec.h"
+#include "zenoh-pico/net/private/msg.h"
 
 /*=============================*/
 /*           Fields            */
