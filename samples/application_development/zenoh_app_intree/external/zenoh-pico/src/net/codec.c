@@ -19,11 +19,6 @@
 #include "zenoh-pico/net/types.h"
 #include "zenoh-pico/net/private/codec.h"
 
-// #include "zenoh-pico/private/logging.h"
-// #include "zenoh-pico/net/private/codec.h"
-// #include "zenoh-pico/net/private/codec.h"
-// #include "zenoh-pico/net/property.h"
-
 // @TODO: property and properties
 // int _zn_property_encode(_z_wbuf_t *buf, const zn_property_t *m)
 // {
