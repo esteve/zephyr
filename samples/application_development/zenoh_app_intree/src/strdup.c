@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+
 /**
  *
  * @brief Duplicate a string

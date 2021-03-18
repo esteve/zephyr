@@ -22,7 +22,7 @@ target_sources(app PRIVATE
   # external/zenoh-pico/src/net/zephyr/system.c
   # external/zenoh-pico/src/utils.c
   # src/rand.c
-  # src/strdup.c
+  src/strdup.c
   # src/strtof.c
   # src/strtok.c
   src/main.c)
