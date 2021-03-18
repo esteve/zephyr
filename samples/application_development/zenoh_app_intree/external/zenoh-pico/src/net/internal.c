@@ -12,16 +12,18 @@
  *   ADLINK zenoh team, <zenoh@adlink-labs.tech>
  */
 
+char *strdup(const char *s);
+
 #include <pthread.h>
 
-#include "zenoh-pico/net/private/internal.h"
+#include "zenoh-pico/net/config.h"
+#include "zenoh-pico/net/types.h"
 #include "zenoh-pico/net/private/msg.h"
+#include "zenoh-pico/private/logging.h"
 #include "zenoh-pico/net/private/msgcodec.h"
+#include "zenoh-pico/private/system.h"
 #include "zenoh-pico/net/private/system.h"
 #include "zenoh-pico/net/rname.h"
-#include "zenoh-pico/private/logging.h"
-#include "zenoh-pico/private/system.h"
-#include "zenoh-pico/utils.h"
 
 /*------------------ Clone helpers ------------------*/
 zn_reskey_t _zn_reskey_clone(const zn_reskey_t *reskey)

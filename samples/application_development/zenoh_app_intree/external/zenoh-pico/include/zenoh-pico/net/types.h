@@ -17,6 +17,8 @@
 
 #include <stdint.h>
 #include <string.h>
+#include "zenoh-pico/types.h"
+#include "zenoh-pico/private/types.h"
 #include "zenoh-pico/net/private/system/zephyr.h"
 
 /**
