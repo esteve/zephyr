@@ -13,7 +13,7 @@ bool is_delim(char c, char *delim)
   return false;
 }
 
-char *strtok1(char *s, char *delim)
+char *strtok(char *s, char *delim)
 {
   static char *p; // start of the next search 
   if(!s)
