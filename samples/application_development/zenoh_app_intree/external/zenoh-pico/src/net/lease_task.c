@@ -13,6 +13,7 @@
  */
 
 #include <pthread.h>
+#include "zenoh-pico/net/config.h"
 #include "zenoh-pico/net/private/internal.h"
 #include "zenoh-pico/net/session.h"
 #include "zenoh-pico/private/logging.h"
