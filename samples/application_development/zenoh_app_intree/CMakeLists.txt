@@ -7,7 +7,7 @@ project(zenoh_app_intree)
 # add_subdirectory(external/zenoh-pico)
 
 target_sources(app PRIVATE
-  # external/zenoh-pico/src/codec.c
+  external/zenoh-pico/src/codec.c
   external/zenoh-pico/src/collection.c
   external/zenoh-pico/src/iobuf.c
   # external/zenoh-pico/src/net/codec.c

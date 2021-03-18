@@ -14,9 +14,11 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include "zenoh-pico/net/config.h"
+#include "zenoh-pico/types.h"
+#include "zenoh-pico/private/types.h"
+#include "zenoh-pico/private/iobuf.h"
 #include "zenoh-pico/private/codec.h"
-#include "zenoh-pico/net/private/codec.h"
-#include "zenoh-pico/net/private/codec.h"
 #include "zenoh-pico/private/logging.h"
 
 /*------------------ z_zint ------------------*/
